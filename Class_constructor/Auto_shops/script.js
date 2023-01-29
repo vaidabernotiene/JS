@@ -12,7 +12,7 @@ class CarClass {
     this.price = price;
     this.image = image;
   }
-  carCard() {
+  carCardTempleate() {
     const containerEl = document.querySelector(".container");
     const divCardEl = document.createElement("div");
     const divCardBodyEl = document.createElement("div");
@@ -31,14 +31,8 @@ class CarClass {
     h6CardEl3.className = "card-subtitle mb-2 text-muted";
     imgCardEl.className = "card-link";
 
-    h5CardEl.innerText = this.brand;
-    h6CardEl1.innerText = `Model: ${this.model}`;
-    h6CardEl2.innerText = `Mileage: ${this.mileage} km`;
-    h6CardEl3.innerText = `Price: ${this.price} Eur`;
-    imgCardEl.innerText = "Picture";
-    imgCardEl.setAttribute("src", this.image);
-    imgCardEl.style.height = "50px";
-    imgCardEl.style.width = "50px";
+    // declare which elements need to upload
+    this.uploadInputToCard(h5CardEl, h6CardEl1, h6CardEl2, h6CardEl3, imgCardEl);
 
     containerEl.append(divCardEl);
     divCardEl.append(divCardBodyEl);
@@ -47,6 +41,18 @@ class CarClass {
     divCardBodyEl.append(h6CardEl1);
     divCardBodyEl.append(h6CardEl2);
     divCardBodyEl.append(h6CardEl3);
+  }
+
+  uploadInputToCard(h5CardEl, h6CardEl1, h6CardEl2, h6CardEl3, imgCardEl) {
+    const { brand, model, mileage, price, image } = this;
+    h5CardEl.innerText = brand;
+    h6CardEl1.innerText = `Model: ${model}`;
+    h6CardEl2.innerText = `Mileage: ${mileage} km`;
+    h6CardEl3.innerText = `Price: ${price} Eur`;
+    imgCardEl.innerText = "Picture";
+    imgCardEl.setAttribute("src", image);
+    imgCardEl.style.height = "50px";
+    imgCardEl.style.width = "50px";
   }
 }
 
@@ -65,7 +71,7 @@ function uploadCar(e) {
 
   const car = new CarClass(carName, carModel, carMileage, carPrice, carImage);
   // create Card with input parametres
-  car.carCard();
+  car.carCardTempleate();
 
   console.log(car);
   // Link on foto
