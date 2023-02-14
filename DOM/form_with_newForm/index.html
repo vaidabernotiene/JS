@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    <form id="my_form">
+        <label for="first_name">First name:</label>
+        <input id="first_name" type="text" name="first_name">
+        <label id="age" for="age">Year of birth:</label>
+        <input id="age" type="number" name="age">
+        <button type="submit">Submit</button>
+    </form>
+    <h3 id="output"></h3>
+    <form id="coffee_form">
+        <p>Need sugar?</p>
+        <label for="yes"></label>
+        <input type="radio" name="need_sugar" value="true" id="yes" checked>
+        <label for="no"></label>
+        <input type="radio" name="need_sugar" value="false" id="no"><br>
+
+        <label for="extra">Need extra sugar</label>
+        <input type="checkbox" name="extra_sugar" id="extra"><br>
+        <button type="submit">Submit</button>
+    </form><br>
+
+    <form id="my_own_form">
+        <label for="first_name">Your name:</label>
+        <input id="first_name" type="text" name="first_name"><br>
+        <label id="age" for="age">Your age:</label>
+        <input id="age" type="number" name="age">
+        <button type="submit">Submit</button>
+    </form>
+    <h1 id="my_own_form_output"></h1><br>
+
+    <form id="clsToFrg_form">
+        <label for="cls_to_frg">Temperature (Celsius):</label>
+        <input id="cls_to_frg" type="number" name="cls_to_frg"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <h1 id="clsToFrgMsg"></h1>
+
+    <form id="workingYears_form">
+        <label for="workingYears">How many years have you been working?</label>
+        <input id="workingYears" type="number" name="workingYears"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <h1 id="workingYearsMsg"></h1>
+
+    <label for="text">Ivesk bet koki teksta:</label>
+    <input type="text" name="" id="text">
+    <h1 id="output_text"></h1><br>
+
+    <form id="email_form">
+        <label for="email">Iveskite el. pasta:</label>
+        <input type="email" name="email" id="email"><br>
+        <label for="spam">Sutinku gauti el. laiskus</label>
+        <input type="checkbox" name="spam" id="spam"><br>
+        <button type="submit">Submit</button>
+    </form><br>
+
+    <h2>BMI Calculator</h2>
+    <form id="bmi_form">
+        <label for="weight">Weight (kg):</label>
+        <input id="weight" type="number" name=weight>
+        <label for="height">Height (cm):</label>
+        <input id="height" type="number" name=height>
+        <button type="submit">Calculate</button>
+        <h4 id="bmi_output"></h4>
+    </form>
+
+    <!-- /*
+    1.
+
+    Sukurkite programą, kurioje bus du inputai - vardas (text)
+    ir skaičius (number) bei tuščias <ul>. Įrašius formoje duomenis,
+        po apačia turi susikurti list itemų tiek, kiek kokį skaičių nurodėte.
+
+        List itemuose turi būti vertė iš vardo laukelio.
+
+        */ -->
+    <form id="numbr_form">
+        <label for="first_name">First name:</label>
+        <input id="first_name" type="text" name="first_name">
+        <label id="numbr" for="numbr">Number:</label>
+        <input id="numbr" type="number" name="numbr">
+        <button type="submit">Submit</button>
+        <ul id="ul_elm" name="ul_elm"></ul>
+    </form>
+
+
+
+    <!-- /*
+        2. Sukurkite programą, kurioje reikia įvesti elektroninį paštą ir
+        pažymėti checkbox'ą "sutinku gauti laiškus".
+
+        Suvedus duomenis, jei checkbox'as "sutinku" nepažymėtas -
+        išmeta - "Registracija nesėkminga". Jei pasirinktas -
+        išmeta "El. paštas [paštas] sėkmingai užregistruotas"
+
+        */ -->
+
+    <!-- const secondForm = document.getElementById("second-form");
+
+        secondForm &&
+        secondForm.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const formData = new FormData(event.target);
+
+        const email = formData.get("email");
+        const isChecked = formData.get("agree");
+
+        if (!isChecked) {
+        alert("Must agree with terms to continue");
+
+        return;
+        }
+
+        console.log(email);
+        });
+
+        /* -->
+    <!-- 3.
+
+        Sukurkite input (be mygtuko), į kurį įrašius vardą ir nulipus
+        nuo input (t.y. blur event), vardas atsiras apačioje tvarkingame
+        sąraše (su kableliais):
+
+        Pvz.: Petras, Jonas, Mantas, Antanas.
+        */
+
+        /* -->
+    <label for="textEl">Ivesk bet koki teksta:</label>
+    <input type="text" name="" id="textEl">
+    
+    <!-- 4.
+
+        Sukurkite programą, kurioje pakrovus puslapį susigeneruoja
+        skaičius tarp 1 ir 5. Vartotojas turi formą su vienu input ir
+        gali spėti skaičių.
+
+        Atspėjus - išmeta alert(atspejai), kitaip alert(neatspejai)
+        */ -->
+    <script src="script.js"></script>
+</body>
+</html>

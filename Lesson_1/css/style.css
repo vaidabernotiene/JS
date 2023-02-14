@@ -1,0 +1,44 @@
+.menu,
+.mobile-links {
+  display: none;
+}
+
+nav {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+.logo {
+  float: left;
+}
+
+.links {
+  float: right;
+}
+
+.links ul {
+  margin: 0;
+}
+
+.links ul li {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 900px) {
+  .links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    float: right;
+  }
+
+  .mobile-links {
+    float: right;
+    clear: right;
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+.card{
+    background-color: lightgrey;
+}
+
+.card-body{
+    background-color: lightcyan;
+    padding: 10px;
+    margin: 10px;
+}
+
+form{
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

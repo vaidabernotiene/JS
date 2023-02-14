@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Add</title>
+</head>
+<body>
+    <header>
+        <h1>Add your property for sale</h1>
+        <p>Yes, you can sell where you live and get cash!</p>
+    </header>
+    <main>
+        <p>Add property:</p>
+        <div id="input-wrapper">
+            <label for="img-input">Img</label>
+            <input id="img-input" type="text" name="img-input">
+            <label for="price-input">Price, Eur</label>
+            <input id="price-input" type="number" name="price-input">
+            <label for="description-input">Description</label>
+            <textarea name="description-input" id="description-input" cols="30" rows="10"></textarea>
+            <label for="city-input">City</label>
+            <select name="city-input" id="city-input">
+                <option value="0">Vilnius</option>
+                <option value="1">Kaunas</option>
+                <option value="2">Klaipeda</option>
+            </select>
+            <button id="property-btn">Add property</button>
+        </div>
+    </main>
+    <!-- <link rel="stylesheet" href="../add.js"> -->
+    <footer>
+        <p>All rights reserved</p>
+    </footer>
+    <script src="add.js"></script>
+</body>
+</html>

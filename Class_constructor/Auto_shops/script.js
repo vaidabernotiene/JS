@@ -12,7 +12,7 @@ class CarClass {
     this.price = price;
     this.image = image;
   }
-  carCardTempleate() {
+  carCardTemplate() {
     const containerEl = document.querySelector(".container");
     const divCardEl = document.createElement("div");
     const divCardBodyEl = document.createElement("div");
@@ -31,9 +31,15 @@ class CarClass {
     h6CardEl3.className = "card-subtitle mb-2 text-muted";
     imgCardEl.className = "card-link";
 
-    // declare which elements need to upload
-    this.uploadInputToCard(h5CardEl, h6CardEl1, h6CardEl2, h6CardEl3, imgCardEl);
-
+// declare which elements need to upload
+    this.uploadInputToCard(
+      h5CardEl,
+      h6CardEl1,
+      h6CardEl2,
+      h6CardEl3,
+      imgCardEl
+    );
+    
     containerEl.append(divCardEl);
     divCardEl.append(divCardBodyEl);
     divCardBodyEl.append(imgCardEl);
@@ -71,7 +77,7 @@ function uploadCar(e) {
 
   const car = new CarClass(carName, carModel, carMileage, carPrice, carImage);
   // create Card with input parametres
-  car.carCardTempleate();
+  car.carCardTemplate();
 
   console.log(car);
   // Link on foto

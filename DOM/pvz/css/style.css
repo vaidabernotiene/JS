@@ -1,0 +1,11 @@
+.box1 {
+  width: 100px;
+  height: 60px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+
+.button1,
+.button2 {
+  padding: 10px;
+}
